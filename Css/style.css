@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /*transfor a font-seze base em 10px*/
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+body {
+    height: 80vh;
+    background-color: rgb(43, 43, 43);
+    font-size: 1.5rem;
+}
+
+.container{
+    width: 60rem;
+    margin: 50px auto 0px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(238, 238, 238);
+}
+
+.footerClass {
+    width: 60rem;
+    margin: 0px auto;
+    justify-content: center;
+    padding: 5px;
+    background-color: rgb(238, 238, 238);
+}
+
+.title {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.italic {
+    text-align: center;
+    font-style: italic;
+}
+
+.calc {
+    margin-top: 5rem;
+}
+
+.calculator {
+    margin: 1rem auto;
+    border: 0.1rem solid coral;
+    background-color: rgb(199, 199, 199);
+    font-size: 2rem;
+}
+
+td {
+    border: 0.1rem solid coral;
+    background-color: rgb(247, 247, 247);
+    border-collapse: collapse;
+    width: 6rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.visor {
+    background-color: white;
+    height: 4rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: right;
+}
+
+input {
+    border: 0.1rem solid coral;
+    border-radius: 3%;
+}
+
+:focus {
+    outline: none;
+}
+
+.but {
+    cursor: pointer;
+}
+
+.nun {
+    background-color: cadetblue;
+}
+
+.wh {
+    background-color: white;
+}
+
+.ez {
+    background-color: rgb(201, 176, 201);
+}
+
+.rz {
+    background-color: tomato;
+}
+
+footer {
+    align-items: center;
+}
+
+footer p{
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.visorcolor {
+    background-color: rgb(199, 199, 199);
+}
+
