@@ -8,7 +8,7 @@ function Calculadora() { //1 -- criar a função calculadora
             this.focusVisor(); //26º manter foco no visor quando iniciar;
             this.cliqueBotoes(); //6º Ao iniciar, será chamado o metodo cliquebotoes;
             this.enter(); //27º chamar um metodo para executar o calculo quando apertar enter;
-           // this.inputNotNumber(); //30º impedir que seja digitado letras;
+            // this.inputNotNumber(); //30º impedir que seja digitado letras;
         },
 
         cliqueBotoes() { //7º cria metodo cliquebotoes;
@@ -16,8 +16,12 @@ function Calculadora() { //1 -- criar a função calculadora
                 const el = e.target; //atribui o click a uma constante.
 
                 if (el.classList.contains('botoes')) { //9º se o elemento capturado possuir a classe "botoes":...
-                    console.log(el.innerText); //10º apenas um teste para ver se esta capturando o text do element.
+                    //    console.log(el.innerText); //10º apenas um teste para ver se esta capturando o text do element.
                     this.botoesForDisplay(el.innerText); //11º chama o metodo que adiciona o text do element ao display;
+                }
+                if (el.classList.contains('parenteses')) {
+                    console.log(el.innerText); //10º apenas um teste para ver se esta capturando o text do element.
+                    this.botoesForDisplay(el.innerText);
                 }
 
                 if (el.classList.contains('clear')) { //13º se o elemento capturar a classe com "clear":....
@@ -37,7 +41,16 @@ function Calculadora() { //1 -- criar a função calculadora
         },
 
         botoesForDisplay(valor) { //12º cria o metodo que adiciona conteudo ao display;
+
+            if (valor === '(') {
+                let lastDig = this.visor.value.slice((this.visor.value.length - 1), 1);
+                if (lastDig) {
+                    this.visor.value += '*';
+                }
+            }
+
             this.visor.value += valor;
+
         },
 
         apagaUltimo() { //17º criação do metodo para apagar o ultimo digito.
